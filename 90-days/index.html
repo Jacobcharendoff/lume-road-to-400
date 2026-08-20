@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lume — The Next 90 Days</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#030303;--paper:#F5F5F2;--stone:#C6C6C1;--grey:#8C8C8C;--line:rgba(255,255,255,.10);--pink:#D91A5B}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--paper);font-family:Inter,-apple-system,sans-serif;font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:99;opacity:.028;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
+nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;padding:1.4rem 6vw;font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;mix-blend-mode:difference;color:#fff}
+.wrap{max-width:1340px;margin:0 auto;padding:0 6vw}
+.hero{position:relative;min-height:78svh;display:flex;align-items:center;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url(https://photos.smugmug.com/2026/Lume/n-qR6bRR/Selects/i-vVkKNvt/0/NNhdvMn4L2vshqRqF4kZNdGStPxXJ5HK82vPKfNK2/X2/9I9A6262-X2.jpg) center/cover;opacity:0;transition:opacity 1.6s ease}
+.hero.on .bg{opacity:1}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,3,3,.95) 0%,rgba(3,3,3,.84) 44%,rgba(3,3,3,.34) 100%)}
+.hero .inner{position:relative;z-index:2;width:100%}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--grey);display:flex;align-items:center;gap:.9rem;margin-bottom:1.8rem}
+.eyebrow::before{content:'';width:26px;height:1px;background:var(--pink)}
+h1{font-size:clamp(2.6rem,8.4vw,7.4rem);font-weight:200;letter-spacing:-.05em;line-height:.94}
+h1 b{display:block;font-weight:900;letter-spacing:-.055em}
+.lede{font-size:clamp(1rem,1.35vw,1.2rem);font-weight:300;color:var(--stone);max-width:60ch;margin-top:2rem;line-height:1.65}
+section{padding:9vh 0 2vh}
+.months{display:grid;grid-template-columns:230px repeat(3,1fr);gap:1.1rem;align-items:end;position:sticky;top:0;background:var(--ink);z-index:40;padding:1.4rem 0 .9rem;border-bottom:1px solid var(--line)}
+.months .sp{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--grey);font-weight:600}
+.mh .mn{font-size:1.5rem;font-weight:900;letter-spacing:-.03em}
+.mh .md{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);font-weight:700;margin-top:.25rem}
+.mh .mt{font-size:.76rem;color:var(--grey);font-weight:300;margin-top:.45rem;line-height:1.5}
+.track{display:grid;grid-template-columns:230px repeat(3,1fr);gap:1.1rem;padding:2.4rem 0;border-bottom:1px solid var(--line);align-items:start}
+.tlab .tn{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--pink);color:var(--pink);font-weight:800;font-size:.76rem;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem}
+.tlab h3{font-size:1.22rem;font-weight:900;letter-spacing:-.03em;line-height:1.15}
+.tlab p{font-size:.78rem;color:var(--grey);font-weight:300;margin-top:.5rem;line-height:1.55}
+.cell{border:1px solid var(--line);border-radius:13px;padding:1.15rem 1.25rem;background:linear-gradient(165deg,rgba(255,255,255,.045),rgba(255,255,255,0));opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
+.cell.on{opacity:1;transform:none}
+.cell:nth-of-type(2){transition-delay:.09s}.cell:nth-of-type(3){transition-delay:.18s}
+.cell.now{border-color:rgba(217,26,91,.5);background:linear-gradient(165deg,rgba(217,26,91,.11),rgba(217,26,91,0))}
+.cell .li{font-size:.82rem;font-weight:300;color:var(--stone);padding:.5rem 0;display:flex;gap:.6rem;line-height:1.55;border-top:1px solid var(--line)}
+.cell .li:first-child{border-top:0;padding-top:0}
+.cell .li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--pink);flex:none;margin-top:.5rem}
+.cell .li b{font-weight:700;color:var(--paper)}
+.close{padding:12vh 0 14vh}
+.close h2{font-size:clamp(1.7rem,4vw,3.4rem);font-weight:200;letter-spacing:-.035em;line-height:1.15;max-width:20ch}
+.close h2 b{font-weight:900;letter-spacing:-.045em}
+.close p{font-size:1rem;font-weight:300;color:var(--stone);max-width:62ch;margin-top:1.8rem;line-height:1.7}
+.rev{opacity:0;transform:translateY(24px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)}
+.rev.on{opacity:1;transform:none}
+@media(max-width:1000px){
+ .months{display:none}
+ .track{grid-template-columns:1fr;gap:.9rem;padding:2rem 0}
+ .cell::before{content:attr(data-m);display:block;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);font-weight:700;margin-bottom:.7rem}
+}
+</style>
+</head>
+<body>
+<nav><span>Lume × Skinfluence</span><span>Sept · Oct · Nov 2026</span></nav>
+
+<div class="hero" id="hero">
+ <div class="bg"></div><div class="shade"></div>
+ <div class="inner"><div class="wrap">
+  <div class="eyebrow rev">The next 90 days</div>
+  <h1 class="rev">Three tracks.<b>Ninety days.</b></h1>
+  <p class="lede rev">Offers create the demand. The front door converts it. Retention keeps it. All three run at the same time, starting in September, and each month builds on the one before it.</p>
+ </div></div>
+</div>
+
+<section><div class="wrap">
+ <div class="months">
+  <div class="sp">Track</div>
+  <div class="mh"><div class="mn">September</div><div class="md">Lock in the year</div><div class="mt">Two offers, each run long. Every purchase banks value the guest uses over the next twelve months.</div></div>
+  <div class="mh"><div class="mn">October</div><div class="md">Grow the spend</div><div class="mt">The same system pointed at your two largest revenue lines.</div></div>
+  <div class="mh"><div class="mn">November</div><div class="md">Bank the year</div><div class="mt">Gifting and memberships that carry revenue into January.</div></div>
+ </div>
+
+ <div class="track">
+  <div class="tlab"><div class="tn">1</div><h3>Offers</h3><p>Creates the demand. A reason to buy now, used all year.</p></div>
+  <div class="cell now" data-m="September">
+   <div class="li"><span><b>Bank Your Botox.</b> Sept 9 to 19. Two full weeks, not a flash sale.</span></div>
+   <div class="li"><span><b>The Sunday Reset.</b> Sept 15 to 30. Buy one custom IV drip, get one free.</span></div>
+   <div class="li"><span>The two windows overlap mid-month, so the list always has something live.</span></div>
+   <div class="li"><span>Every purchase puts credit on the guest's account, redeemed over 12 months.</span></div>
+  </div>
+  <div class="cell" data-m="October">
+   <div class="li"><span><b>The Fall Reset.</b> Hyperbaric and body sculpting, your two biggest rooms.</span></div>
+   <div class="li"><span>Private window for your highest-spending guests, then public.</span></div>
+   <div class="li"><span><b>Botox and IV banking stays open</b> to anyone who missed September.</span></div>
+  </div>
+  <div class="cell" data-m="November">
+   <div class="li"><span><b>Holiday gifting.</b> Packages built to be given, not discounted.</span></div>
+   <div class="li"><span>Memberships and pre-paid plans that carry into January.</span></div>
+   <div class="li"><span>Black Friday framed as banked value, never percent off.</span></div>
+  </div>
+ </div>
+
+ <div class="track">
+  <div class="tlab"><div class="tn">2</div><h3>New guests</h3><p>Opens the front door. Turns interest into a first visit.</p></div>
+  <div class="cell now" data-m="September">
+   <div class="li"><span><b>Booking fork live.</b> New guests and returning guests take different paths.</span></div>
+   <div class="li"><span>New-client form reaches the front desk in real time.</span></div>
+   <div class="li"><span>First-visit offer fires at 48 hours, with a 10-day follow-up behind it.</span></div>
+  </div>
+  <div class="cell" data-m="October">
+   <div class="li"><span>Budget follows what actually sold in September, by channel.</span></div>
+   <div class="li"><span>Influencers judged on sales, not reach. Keep, cut or scale.</span></div>
+   <div class="li"><span>Consult to treatment follow-up tightened so fewer consults go cold.</span></div>
+  </div>
+  <div class="cell" data-m="November">
+   <div class="li"><span>Reviews and photos captured after the visit, feeding search and social.</span></div>
+   <div class="li"><span>Referral offer to everyone who bought in September and October.</span></div>
+  </div>
+ </div>
+
+ <div class="track">
+  <div class="tlab"><div class="tn">3</div><h3>Retention</h3><p>Closes the back door. Gets people back through it.</p></div>
+  <div class="cell now" data-m="September">
+   <div class="li"><span><b>Abandoned cart</b> at 1 hour, 24 hours and 72 hours on every offer page.</span></div>
+   <div class="li"><span>Banked credit is the reason to return. Not a coupon, a balance.</span></div>
+  </div>
+  <div class="cell" data-m="October">
+   <div class="li"><span><b>Redemption reminders.</b> Banked value gets onto the calendar.</span></div>
+   <div class="li"><span>Rebook flow for consult no-shows and lapsed appointments.</span></div>
+  </div>
+  <div class="cell" data-m="November">
+   <div class="li"><span>The one-and-done list worked service by service.</span></div>
+   <div class="li"><span>Anyone still holding unused credit gets a dated invitation before year end.</span></div>
+  </div>
+ </div>
+</div></section>
+
+<div class="close"><div class="wrap">
+ <h2 class="rev">September fills the bank.<br>October adds the big rooms.<br><b>November carries it into next year.</b></h2>
+ <p class="rev">One system, three tracks, ninety days. Every offer page, text, post and automation carries its own link, so we can see which track earned what, and move budget the same week.</p>
+</div></div>
+
+<script>
+document.getElementById('hero').classList.add('on');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.15,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.cell,.rev').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.hero .rev').forEach((el,i)=>setTimeout(()=>el.classList.add('on'),i*140)),120);
+</script>
+</body>
+</html>
