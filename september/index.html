@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Lume — September 2026</title>
+<title>Lume — Sept 15 to Oct 15</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#030303;--paper:#F5F5F2;--stone:#C6C6C1;--line:#DCDCD8;--grey:#8C8C8C;--pink:#D91A5B}
@@ -57,9 +57,9 @@ h2 b{font-weight:900;letter-spacing:-.05em}
 .steps p{font-size:.95rem;font-weight:300;color:var(--stone)}
 .light .steps p{color:#3A3A36}
 .steps p b{font-weight:700;color:inherit}
-.fire{margin-top:1.8rem;max-width:560px}
+.fire{margin-top:1.6rem;max-width:580px}
 .fire .fh{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);font-weight:700;margin-bottom:.4rem}
-.fire .f{display:grid;grid-template-columns:86px 84px 1fr;gap:.9rem;padding:.5rem 0;border-top:1px solid rgba(255,255,255,.09);font-size:.8rem;align-items:baseline}
+.fire .f{display:grid;grid-template-columns:96px 88px 1fr;gap:.9rem;padding:.46rem 0;border-top:1px solid rgba(255,255,255,.09);font-size:.78rem;align-items:baseline}
 .light .fire .f{border-top-color:var(--line)}
 .fire .f .dy{font-weight:800;white-space:nowrap}
 .fire .f .ch2{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--pink);font-weight:700;white-space:nowrap}
@@ -71,6 +71,8 @@ h2 b{font-weight:900;letter-spacing:-.05em}
 .rail .segfill{position:absolute;top:0;bottom:0;left:0;border-radius:2px;background:rgba(217,26,91,.22);width:0}
 .rail .band{position:absolute;top:-2px;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--pink),#ff5f8f);box-shadow:0 2px 14px rgba(217,26,91,.35);transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.19,1,.22,1)}
 .rail .band.on{transform:scaleX(1)}
+.rail .blab{position:absolute;top:-2.4rem;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);font-weight:700;white-space:nowrap;opacity:0;transition:opacity .8s}
+.rail .blab.on{opacity:1}
 .rail .tick{position:absolute;top:-5px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--pink);transform:translateX(-50%) scale(0);transition:transform .6s cubic-bezier(.34,1.56,.64,1);z-index:2}
 .rail .tick.on{transform:translateX(-50%) scale(1)}
 .rail .marks{position:relative;height:1.3em;font-size:.66rem;letter-spacing:.14em;color:var(--grey);margin-top:1.2rem;text-transform:uppercase}
@@ -94,17 +96,17 @@ h2 b{font-weight:900;letter-spacing:-.05em}
 .hub span{font-size:.84rem;color:var(--stone);font-weight:300}
 .pulse{width:10px;height:10px;border-radius:50%;background:var(--pink);flex:none;animation:pu 1.8s ease infinite}
 @keyframes pu{0%{box-shadow:0 0 0 0 rgba(217,26,91,.5)}70%{box-shadow:0 0 0 14px rgba(217,26,91,0)}100%{box-shadow:0 0 0 0 rgba(217,26,91,0)}}
-/* windows row (month scene) */
-.wins{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.8rem;max-width:1100px}
-.win{border:1px solid var(--line);background:#fff;border-radius:14px;padding:1.2rem 1.3rem;box-shadow:0 24px 60px -45px rgba(0,0,0,.3)}
+/* windows row */
+.wins{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:2.8rem;max-width:860px}
+.win{border:1px solid var(--line);background:#fff;border-radius:14px;padding:1.3rem 1.4rem;box-shadow:0 24px 60px -45px rgba(0,0,0,.3)}
 .win .wn{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);font-weight:700}
-.win h4{font-size:1.05rem;font-weight:800;letter-spacing:-.02em;margin:.3rem 0 .35rem}
-.win p{font-size:.78rem;color:#55554F;font-weight:400;line-height:1.5}
-/* sequence row (month scene) */
+.win h4{font-size:1.15rem;font-weight:800;letter-spacing:-.02em;margin:.3rem 0 .4rem}
+.win p{font-size:.8rem;color:#55554F;font-weight:400;line-height:1.55}
+/* sequence row */
 .seq{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3.2rem;max-width:1100px}
 .seq .sn{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);font-weight:700;display:block;padding-bottom:.7rem;border-bottom:1px solid var(--line);margin-bottom:.9rem}
 .seq p{font-size:.88rem;font-weight:300;color:#55554F;line-height:1.6}
-/* split layout: copy left, image panel right */
+/* split layout */
 .split .wrap{max-width:58%;margin:0}
 .sideimg{position:absolute;top:0;right:0;bottom:0;width:38%;z-index:1;background-size:cover;background-position:center;opacity:0;transition:opacity 1.5s ease;transform:translateY(calc(var(--sp,0)*-32px)) scale(1.05)}
 .pin.s1 .sideimg{opacity:1}
@@ -141,12 +143,12 @@ h2 b{font-weight:900;letter-spacing:-.05em}
 .pin.s2 .rule svg path{stroke-dashoffset:0}
 .rule p{font-size:1rem;font-weight:300;color:var(--stone)}
 .rule p b{font-weight:700;color:inherit}
-@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}.wins,.seq{grid-template-columns:1fr}.actbody .col{max-width:100%}.pin.s2 .hero{display:none}.ask .a{grid-template-columns:44px 1fr;grid-auto-rows:auto}.ask .dt{grid-column:2}.picks .p{grid-template-columns:1fr;gap:.2rem}.sideimg{display:none}.split .wrap{max-width:100%}}
+@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}.wins,.seq{grid-template-columns:1fr}.actbody .col{max-width:100%}.pin.s2 .hero{display:none}.rail .blab{display:none}.ask .a{grid-template-columns:44px 1fr;grid-auto-rows:auto}.ask .dt{grid-column:2}.picks .p{grid-template-columns:1fr;gap:.2rem}.sideimg{display:none}.split .wrap{max-width:100%}}
 </style>
 </head>
 <body>
 <div class="prog" id="prog"></div>
-<nav><span>Lume × Skinfluence</span><span>September 2026</span></nav>
+<nav><span>Lume × Skinfluence</span><span>Sept 15 to Oct 15</span></nav>
 
 <!-- SCENE 1 · OPEN -->
 <div class="scene" data-len="1.6" data-auto="1">
@@ -155,9 +157,9 @@ h2 b{font-weight:900;letter-spacing:-.05em}
   <div class="shade"></div>
   <div class="glow" style="width:70vw;height:70vw;background:rgba(217,26,91,.18);left:-18vw;top:-22vw"></div>
   <div class="wrap">
-   <div class="eyebrow fx f1">Lume Wellness · September 2026</div>
+   <div class="eyebrow fx f1">Lume Wellness · Sept 15 to Oct 15</div>
    <h1 class="title" id="bigtitle">Lock in<br><span class="t">the year.</span></h1>
-   <p class="lede fx f2">Three exclusive offers across three weeks. Each one banks value your guests use for the next twelve months: Botox, IV drips, laser. Bought in September. Redeemed all year. Measured to the dollar.</p>
+   <p class="lede fx f2">Two offers across thirty days. Botox banked at nine dollars a unit, then custom IV drips two for one. Each one puts credit on the guest's account, used over the next twelve months. Bought now. Redeemed all year. Measured to the dollar.</p>
   </div>
  </div>
 </div>
@@ -176,7 +178,7 @@ h2 b{font-weight:900;letter-spacing:-.05em}
     <div class="steps">
      <div class="s fx f3"><div class="n">1</div><p><b>Almost half of your guests come once and never return.</b> That is the single largest number in your account.</p></div>
      <div class="s fx f4"><div class="n">2</div><p><b>The gap is the opportunity.</b> Your typical guest stops well short of what your best guests spend. Closing that gap beats any new-guest ad.</p></div>
-     <div class="s fx f5"><div class="n">3</div><p><b>Banked value closes it.</b> Every September offer puts credit on the guest's account: units, drips, sessions, a laser credit. A discount buys one visit. A bank schedules a year.</p></div>
+     <div class="s fx f5"><div class="n">3</div><p><b>Banked value closes it.</b> Both offers put credit on the guest's account: units and drips they come back to use. A discount buys one visit. A bank schedules a year.</p></div>
     </div>
     <p class="note fx f6">Based on Lume's full guest history in Zenoti.</p>
    </div>
@@ -184,38 +186,38 @@ h2 b{font-weight:900;letter-spacing:-.05em}
  </div>
 </div>
 
-<!-- SCENE 3 · THE MONTH -->
+<!-- SCENE 3 · THE THIRTY DAYS -->
 <div class="scene light" data-len="2.6">
  <div class="pin light">
   <div class="wrap">
-   <div class="eyebrow fx f1">The month at a glance</div>
-   <h2 class="fx f1">A quiet build week.<br>Then <b>three offer windows.</b></h2>
+   <div class="eyebrow fx f1">Thirty days at a glance</div>
+   <h2 class="fx f1">Two offers.<br><b>Back to back.</b></h2>
    <div class="wins">
-    <div class="win fx f2"><div class="wn">Window one · Sept 9 to 12</div><h4>Bank Your Botox</h4><p>$999 banks 111 units at $9 a unit, used over 12 months. Free IV drip included.</p></div>
-    <div class="win fx f3"><div class="wn">Window two · Sept 15 to 19</div><h4>Sunday Reset</h4><p>Buy one custom IV drip, get one free. Both banked, redeemed on Sundays all year.</p></div>
-    <div class="win fx f4"><div class="wn">Window three · Sept 21 to 30</div><h4>Laser Season</h4><p>VIPs first: buy 3, get 1. Then public: buy 3, free consult plus a $400 laser credit.</p></div>
+    <div class="win fx f2"><div class="wn">Offer one · Sept 15 to 30</div><h4>Bank Your Botox</h4><p>Nine dollars a unit, banked on the account and used over twelve months. Two full weeks to buy, not a flash sale.</p></div>
+    <div class="win fx f3"><div class="wn">Offer two · Oct 1 to 15</div><h4>The Sunday Reset</h4><p>Buy one custom IV drip, get one free. Both banked at purchase, redeemed on Sundays across the year.</p></div>
    </div>
-   <div class="rail" id="rail" style="margin-top:3rem">
+   <div class="rail" id="rail" style="margin-top:3.4rem">
+    <div class="blab" data-at=".05" style="left:0">Bank Your Botox</div>
+    <div class="blab" data-at=".55" style="left:52%">The Sunday Reset</div>
     <div class="track">
      <div class="segfill"></div>
-     <div class="band" data-at=".276" style="left:27.6%;width:13.8%"></div>
-     <div class="band" data-at=".483" style="left:48.3%;width:17.2%"></div>
-     <div class="band" data-at=".690" style="left:69%;width:31%"></div>
-     <div class="tick" data-at=".276" style="left:27.6%"></div>
-     <div class="tick" data-at=".414" style="left:41.4%"></div>
-     <div class="tick" data-at=".483" style="left:48.3%"></div>
-     <div class="tick" data-at=".655" style="left:65.5%"></div>
-     <div class="tick" data-at=".690" style="left:69%"></div>
+     <div class="band" data-at=".05" style="left:0;width:48%"></div>
+     <div class="band" data-at=".55" style="left:52%;width:48%"></div>
+     <div class="tick" data-at=".05" style="left:0"></div>
+     <div class="tick" data-at=".12" style="left:6.7%"></div>
+     <div class="tick" data-at=".26" style="left:23.3%"></div>
+     <div class="tick" data-at=".50" style="left:50%"></div>
+     <div class="tick" data-at=".60" style="left:56.7%"></div>
      <div class="tick" data-at="1" style="left:100%"></div>
     </div>
-    <div class="marks"><span style="left:0">Sept 1</span><span style="left:27.6%">9</span><span style="left:48.3%">15</span><span style="left:69%">21</span><span style="left:100%">30</span></div>
+    <div class="marks"><span style="left:0">Sept 15</span><span style="left:23.3%">22</span><span style="left:50%">Sept 30</span><span style="left:76.7%">Oct 8</span><span style="left:100%">Oct 15</span></div>
    </div>
    <div class="seq fx f5">
     <div class="sq"><span class="sn">First</span><p>Each offer opens to the guests who already buy that service. Warm lists, built from your own booking history.</p></div>
     <div class="sq"><span class="sn">Then</span><p>It opens to the full list, with social, boosting and influencers behind it.</p></div>
     <div class="sq"><span class="sn">Throughout</span><p>Every channel carries its own link. Every sale is tagged to what sent it.</p></div>
    </div>
-   <p class="note fx f6">Week one: website and booking system go live, offer pages built, automations tested, influencers briefed. No sends until the 9th.</p>
+   <p class="note fx f6">Before the 15th: website and booking system live, both offer pages built, automations tested, influencers briefed. No sends until Botox opens.</p>
   </div>
  </div>
 </div>
@@ -229,19 +231,20 @@ h2 b{font-weight:900;letter-spacing:-.05em}
   <div class="herolab">a unit. Banked for the year.</div>
   <div class="actbody">
    <div class="col">
-    <div class="eyebrow fx f2">Offer one · Sept 9 to 12</div>
+    <div class="eyebrow fx f2">Offer one · Sept 15 to 30</div>
     <div class="acttitle fx f2">Bank Your<br>Botox.</div>
     <div class="steps">
      <div class="s fx f3"><div class="n">1</div><p><b>$999 buys 111 units</b> at $9 a unit. Regular price is $12. The credit sits on the guest's account.</p></div>
      <div class="s fx f4"><div class="n">2</div><p><b>12 months to use it.</b> Treatments deduct from the bank. A free custom IV drip comes with it.</p></div>
-     <div class="s fx f5"><div class="n">3</div><p><b>Buy more than one, or gift one.</b> The four-day purchase window is the urgency. The treatment can come later.</p></div>
+     <div class="s fx f5"><div class="n">3</div><p><b>Buy more than one, or gift one.</b> Two weeks to decide. The treatment can come whenever they are ready.</p></div>
     </div>
     <div class="fire fx f6"><div class="fh">What fires, when, to who</div>
-     <div class="f"><span class="dy">Tue 9</span><span class="ch2">Email</span><span class="wh2"><b>Past Botox guests.</b> Offer opens, link to the offer page.</span></div>
-     <div class="f"><span class="dy">Wed 10</span><span class="ch2">SMS</span><span class="wh2"><b>Same warm list.</b> One text, direct link.</span></div>
-     <div class="f"><span class="dy">Thu 11</span><span class="ch2">Email</span><span class="wh2"><b>Full list.</b> Public launch.</span></div>
-     <div class="f"><span class="dy">All 4 days</span><span class="ch2">Boost + Inf.</span><span class="wh2"><b>Chicago audience.</b> Budget behind the reveal post. Influencer post 1, own link.</span></div>
-     <div class="f"><span class="dy">Sat 12</span><span class="ch2">Email</span><span class="wh2"><b>Openers who did not buy.</b> Closes tonight.</span></div>
+     <div class="f"><span class="dy">Tue 15</span><span class="ch2">Email</span><span class="wh2"><b>Past Botox guests.</b> Offer opens, link to the offer page.</span></div>
+     <div class="f"><span class="dy">Wed 16</span><span class="ch2">SMS</span><span class="wh2"><b>Same warm list.</b> One text, direct link.</span></div>
+     <div class="f"><span class="dy">Thu 17</span><span class="ch2">Email</span><span class="wh2"><b>Full list.</b> Public launch.</span></div>
+     <div class="f"><span class="dy">Tue 22</span><span class="ch2">Email</span><span class="wh2"><b>Openers who did not buy.</b> Halfway reminder.</span></div>
+     <div class="f"><span class="dy">All 16 days</span><span class="ch2">Boost + Inf.</span><span class="wh2"><b>Chicago audience.</b> Budget behind the reveal post. Influencer post 1, own link.</span></div>
+     <div class="f"><span class="dy">Mon 29 to 30</span><span class="ch2">Email + SMS</span><span class="wh2"><b>Full list and clickers.</b> Final two days.</span></div>
     </div>
    </div>
   </div>
@@ -257,54 +260,27 @@ h2 b{font-weight:900;letter-spacing:-.05em}
   <div class="herolab">Custom IV drips. Sundays only.</div>
   <div class="actbody">
    <div class="col">
-    <div class="eyebrow fx f2">Offer two · Sept 15 to 19</div>
+    <div class="eyebrow fx f2">Offer two · Oct 1 to 15</div>
     <div class="acttitle fx f2">The Sunday<br>Reset.</div>
     <div class="steps">
      <div class="s fx f3"><div class="n">1</div><p><b>Buy one custom IV drip, get one free.</b> Both go on the guest's account at purchase.</p></div>
      <div class="s fx f4"><div class="n">2</div><p><b>Sundays only, 12 months to use them.</b> Each drip is customized on the day of the visit.</p></div>
-     <div class="s fx f5"><div class="n">3</div><p><b>Purchase closes midnight Saturday the 19th.</b></p></div>
+     <div class="s fx f5"><div class="n">3</div><p><b>Purchase closes midnight Wednesday the 15th.</b> Two weeks, then it is gone.</p></div>
     </div>
     <div class="fire fx f6"><div class="fh">What fires, when, to who</div>
-     <div class="f"><span class="dy">Tue 15</span><span class="ch2">Email</span><span class="wh2"><b>Full list.</b> Offer opens.</span></div>
-     <div class="f"><span class="dy">Wed 17</span><span class="ch2">Email</span><span class="wh2"><b>Past IV guests.</b> They know the drip. Get two.</span></div>
-     <div class="f"><span class="dy">All 5 days</span><span class="ch2">Boost + Inf.</span><span class="wh2"><b>IV and wellness interests.</b> Influencer post 2, own link.</span></div>
-     <div class="f"><span class="dy">Sat 19 noon</span><span class="ch2">SMS</span><span class="wh2"><b>Clickers who did not buy.</b> Ends at midnight.</span></div>
-     <div class="f"><span class="dy">Sat 19 eve</span><span class="ch2">Email</span><span class="wh2"><b>Full list.</b> Last call.</span></div>
+     <div class="f"><span class="dy">Thu Oct 1</span><span class="ch2">Email</span><span class="wh2"><b>Full list.</b> Offer opens the day Botox closes.</span></div>
+     <div class="f"><span class="dy">Fri Oct 2</span><span class="ch2">Email + SMS</span><span class="wh2"><b>Past IV guests.</b> They know the drip. Get two.</span></div>
+     <div class="f"><span class="dy">Tue Oct 7</span><span class="ch2">Email</span><span class="wh2"><b>Openers who did not buy.</b> Halfway reminder.</span></div>
+     <div class="f"><span class="dy">All 15 days</span><span class="ch2">Boost + Inf.</span><span class="wh2"><b>IV and wellness interests.</b> Influencer post 2, own link.</span></div>
+     <div class="f"><span class="dy">Tue Oct 14</span><span class="ch2">SMS</span><span class="wh2"><b>Clickers who did not buy.</b> Ends tomorrow.</span></div>
+     <div class="f"><span class="dy">Wed Oct 15</span><span class="ch2">Email</span><span class="wh2"><b>Full list.</b> Last call, closes at midnight.</span></div>
     </div>
    </div>
   </div>
  </div>
 </div>
 
-<!-- SCENE 6 · OFFER THREE -->
-<div class="scene" data-len="3">
- <div class="pin">
-  <div class="bg" style="background-image:url(https://photos.smugmug.com/2026/Lume/n-qR6bRR/Selects/i-cnDc3TV/0/Mj9ZVrRGDtrFpq5CdCt5LkCDs6MMz9Jwzn3CQ6xHj/X2/9I9A6798-X2.jpg);background-position:75% center"></div>
-  <div class="shade"></div>
-  <div class="hero" style="position:relative;z-index:2">3+1</div>
-  <div class="herolab">BBL + Moxi. VIPs first.</div>
-  <div class="actbody">
-   <div class="col">
-    <div class="eyebrow fx f2">Offer three · Sept 21 to 30</div>
-    <div class="acttitle fx f2">Laser<br>Season.</div>
-    <div class="steps">
-     <div class="s fx f3"><div class="n">1</div><p><b>Sept 21 to 25, VIP only.</b> Your past skin-treatment guests: buy 3 sessions, get 1 free.</p></div>
-     <div class="s fx f4"><div class="n">2</div><p><b>Sept 28 to 30, public.</b> Buy 3, get a free consultation plus a $400 laser credit, valid 12 months.</p></div>
-     <div class="s fx f5"><div class="n">3</div><p><b>First day of fall is the story.</b> Summer sun damage. No percent-off discounting.</p></div>
-    </div>
-    <div class="fire fx f6"><div class="fh">What fires, when, to who</div>
-     <div class="f"><span class="dy">Mon 21</span><span class="ch2">Email + SMS</span><span class="wh2"><b>Past skin-treatment guests.</b> Private access opens, VIP code.</span></div>
-     <div class="f"><span class="dy">26 to 27</span><span class="ch2">Social</span><span class="wh2"><b>Everyone.</b> Public teaser.</span></div>
-     <div class="f"><span class="dy">Mon 28</span><span class="ch2">Email</span><span class="wh2"><b>Full list.</b> Public launch. Boost starts. Influencer post 3.</span></div>
-     <div class="f"><span class="dy">Tue 29</span><span class="ch2">Email</span><span class="wh2"><b>Full list.</b> The $400 credit, explained.</span></div>
-     <div class="f"><span class="dy">Wed 30</span><span class="ch2">Email + SMS</span><span class="wh2"><b>Full list + clickers.</b> Final day.</span></div>
-    </div>
-   </div>
-  </div>
- </div>
-</div>
-
-<!-- SCENE 7 · INFLUENCERS -->
+<!-- SCENE 6 · INFLUENCERS -->
 <div class="scene" data-len="2.6">
  <div class="pin split">
   <div class="sideimg" style="background-image:url(https://photos.smugmug.com/2026/Lume/n-qR6bRR/Selects/i-76wNG69/0/MQdRbtDNzkqcLZ6pz3C5tfgfvmpRcMKTbkqqsrQ89/X2/9I9A6367-X2.jpg)"></div>
@@ -314,11 +290,11 @@ h2 b{font-weight:900;letter-spacing:-.05em}
    <div class="rule">
     <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p><b>You pick three, we run everything.</b> Briefs, contracts, scheduling and coded links are ours to run. Compensation sits with Lume: gifted services or an agreed fee per creator.</p></div>
     <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p><b>One post per offer window, one coded link each.</b> Every sale tags back to the post that sent it.</p></div>
-    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p><b>September is the audition.</b> If the posts sell, influencers become a budgeted October channel. If they do not, we cut it and say so.</p></div>
+    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p><b>These thirty days are the audition.</b> If the posts sell, influencers become a budgeted channel with numbers behind it. If they do not, we cut it and say so.</p></div>
    </div>
    <div class="picks fx f4"><div class="ph">Our top three from the research of ten</div>
     <div class="p"><span class="nm">Whitney Buha</span><span class="hd">@somethingwhitty · 409K</span><span class="why">Chicago lifestyle and home creator. Commerce-driven posts, millennial female audience. Built to convert offers, not just reach.</span></div>
-    <div class="p"><span class="nm">Sam Cushing</span><span class="hd">@sam.cushing · 895K</span><span class="why">Chicago fitness and grooming creator. Fits IV, laser and men's wellness. Already known to Lume.</span></div>
+    <div class="p"><span class="nm">Sam Cushing</span><span class="hd">@sam.cushing · 895K</span><span class="why">Chicago fitness and grooming creator. Fits IV, injectables and men's wellness. Already known to Lume.</span></div>
     <div class="p"><span class="nm">Shaina Hurley</span><span class="hd">@shaina.hurley · 227K</span><span class="why">Love Is Blind personality and hairstylist with Chicago roots. Beauty credibility and reality reach at a workable size.</span></div>
    </div>
    <p class="note fx f5">Benchmark first: Matt Johnson (@supmattj) already carries a live Lume code, MATT25. We pull its redemptions before the first post so this channel starts with a baseline. Final picks are yours; swap any of these from the shortlist of ten.</p>
@@ -326,27 +302,27 @@ h2 b{font-weight:900;letter-spacing:-.05em}
  </div>
 </div>
 
-<!-- SCENE 8 · CHANNELS -->
+<!-- SCENE 7 · CHANNELS -->
 <div class="scene" data-len="2.2">
  <div class="pin">
   <div class="wrap">
    <div class="eyebrow fx f1">How it connects, and how we count it</div>
    <h2 class="fx f1">Six channels.<br><b>One booking page.</b></h2>
    <div class="flow">
-    <div class="fl"><svg class="ic" viewBox="0 0 40 40"><rect x="6" y="10" width="28" height="20" rx="3"/><path d="M6 13l14 10 14-10"/></svg><h4>Email</h4><p>Launch, targeted and deadline sends per offer. Resends to openers only.</p></div>
+    <div class="fl"><svg class="ic" viewBox="0 0 40 40"><rect x="6" y="10" width="28" height="20" rx="3"/><path d="M6 13l14 10 14-10"/></svg><h4>Email</h4><p>Launch, targeted, halfway and deadline sends per offer. Resends to openers only.</p></div>
     <div class="fl"><svg class="ic" viewBox="0 0 40 40"><rect x="11" y="5" width="18" height="30" rx="4"/><path d="M17 30h6"/></svg><h4>SMS</h4><p>One warm-list text per offer, one deadline text to clickers who did not buy.</p></div>
-    <div class="fl"><svg class="ic" viewBox="0 0 40 40"><rect x="7" y="7" width="26" height="26" rx="7"/><circle cx="20" cy="20" r="6"/><circle cx="29" cy="11" r="1.6"/></svg><h4>Social</h4><p>Reveal, proof, countdown for each offer. Brand content in week one.</p></div>
-    <div class="fl"><svg class="ic" viewBox="0 0 40 40"><path d="M8 32V20M20 32V10M32 32v-8"/><path d="M5 35h30"/></svg><h4>Boosts</h4><p>The agreed monthly budget, split across the three offer windows, Chicago audiences.</p></div>
+    <div class="fl"><svg class="ic" viewBox="0 0 40 40"><rect x="7" y="7" width="26" height="26" rx="7"/><circle cx="20" cy="20" r="6"/><circle cx="29" cy="11" r="1.6"/></svg><h4>Social</h4><p>Reveal, proof and countdown across both windows. Brand content in between.</p></div>
+    <div class="fl"><svg class="ic" viewBox="0 0 40 40"><path d="M8 32V20M20 32V10M32 32v-8"/><path d="M5 35h30"/></svg><h4>Boosts</h4><p>The agreed budget, split across the two offer windows, Chicago audiences.</p></div>
     <div class="fl"><svg class="ic" viewBox="0 0 40 40"><circle cx="20" cy="13" r="6"/><path d="M8 33c2-7 6-10 12-10s10 3 12 10"/></svg><h4>Influencers</h4><p>Three, picked by Lume from our shortlist of ten. One post per offer, each with its own link.</p></div>
     <div class="fl"><svg class="ic" viewBox="0 0 40 40"><circle cx="20" cy="20" r="13"/><path d="M20 11v9l6 5"/></svg><h4>Automations</h4><p>Booking fork, abandoned cart at 1h, 24h, 72h, and the 48-hour new-guest offer.</p></div>
    </div>
    <div class="beam fx f2"><i></i></div>
-   <div class="hub fx f2"><div class="pulse"></div><div><b>Every channel carries its own link to the same page.</b> <span>Every sale is tagged to the channel that sent it. We review channels daily while a window runs: what sells gets more, what does not gets cut. Built in Podium, live by September 8.</span></div></div>
+   <div class="hub fx f2"><div class="pulse"></div><div><b>Every channel carries its own link to the same page.</b> <span>Every sale is tagged to the channel that sent it. We review channels daily while a window runs: what sells gets more, what does not gets cut. Built in Podium, live before September 15.</span></div></div>
   </div>
  </div>
 </div>
 
-<!-- SCENE 9 · WHAT WE NEED FROM YOU -->
+<!-- SCENE 8 · WHAT WE NEED FROM YOU -->
 <div class="scene light" data-len="2.2">
  <div class="pin light" style="background:#EDEDEA">
   <div class="wrap">
@@ -357,21 +333,21 @@ h2 b{font-weight:900;letter-spacing:-.05em}
     <div class="a"><div class="an">2</div><p><b>Confirm Sunday IV capacity</b> for a year of redemptions.</p><span class="dt">Aug 26</span></div>
     <div class="a"><div class="an">3</div><p><b>Approve the copy direction</b>: email, SMS and the social calendar.</p><span class="dt">Aug 26</span></div>
     <div class="a"><div class="an">4</div><p><b>Confirm banked credits</b> can sit on the account in the booking system, with us.</p><span class="dt">Aug 26</span></div>
-    <div class="a"><div class="an">5</div><p><b>Set gifting and repeat-purchase rules</b> for each offer.</p><span class="dt">Aug 26</span></div>
+    <div class="a"><div class="an">5</div><p><b>Set gifting and repeat-purchase rules</b> for both offers.</p><span class="dt">Aug 26</span></div>
    </div>
-   <p class="note fx f3">One meeting settles all five. Everything else is ours: pages, links, automations, copy, and the Illinois check on advertised unit pricing, done by Aug 27. All of it live by September 8.</p>
+   <p class="note fx f3">One meeting settles all five. Everything else is ours: pages, links, automations, copy, and the Illinois check on advertised unit pricing, done by Aug 27. All of it live before September 15.</p>
   </div>
  </div>
 </div>
 
-<!-- SCENE 10 · CLOSE -->
+<!-- SCENE 9 · CLOSE -->
 <div class="scene" data-len="1.4">
  <div class="pin">
   <div class="bg" style="background-image:url(https://photos.smugmug.com/2026/Lume/n-qR6bRR/Selects/i-kTmhQpw/0/MZhn4KjTvgKLpvxHxKTMM3n6c86q2gDVsKCsBLTxT/X2/9I9A6723-X2.jpg)"></div>
   <div class="shade full"></div>
   <div class="wrap">
-   <h1 class="title go" style="font-size:clamp(2.6rem,8vw,8rem)"><span class="t">September locks in the guest.</span><br>October grows the spend.</h1>
-   <p class="lede fx f1">Every offer this month puts a reason to return on the guest's account. In October we point the same system at hyperbaric and body sculpting, your two largest revenue lines.</p>
+   <h1 class="title go" style="font-size:clamp(2.6rem,8vw,8rem)"><span class="t">Thirty days locks in the guest.</span><br>The year redeems it.</h1>
+   <p class="lede fx f1">Both offers put a reason to return on the guest's account, good for twelve months. From there we point the same system at hyperbaric and body sculpting, your two largest revenue lines.</p>
   </div>
  </div>
 </div>
@@ -385,7 +361,6 @@ bt.innerHTML=bt.innerHTML.split('<br>').map(seg=>{
 [...bt.querySelectorAll('.ch')].forEach((s,i)=>s.style.transitionDelay=(i*28)+'ms');
 requestAnimationFrame(()=>setTimeout(()=>bt.classList.add('go'),150));
 document.querySelectorAll('.scene').forEach(sc=>{sc.style.height=(parseFloat(sc.dataset.len||2)*100)+'svh';});
-/* scrub engine v2: raw progress per scene, eased toward target every frame */
 const scenes=[...document.querySelectorAll('.scene')];
 const state=scenes.map(sc=>({sc,pin:sc.querySelector('.pin'),ats:[...sc.querySelectorAll('[data-at]')],fill:sc.querySelector('.segfill'),cur:0,target:0}));
 let prog=0;
