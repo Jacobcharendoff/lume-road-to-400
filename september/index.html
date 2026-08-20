@@ -49,6 +49,7 @@ h2 b{font-weight:900;letter-spacing:-.05em}
 .actbody{position:absolute;inset:0;display:flex;align-items:center;padding:0 7vw;z-index:2}
 .actbody .col{max-width:560px}
 .acttitle{font-size:clamp(2.4rem,6vw,5.4rem);font-weight:900;letter-spacing:-.05em;line-height:.95}
+.acttitle span{font-weight:200}
 .steps{margin-top:2.2rem;max-width:520px}
 .steps .s{display:grid;grid-template-columns:44px 1fr;gap:1.1rem;padding:1.05rem 0;border-top:1px solid rgba(255,255,255,.09);align-items:start}
 .light .steps .s{border-top-color:var(--line)}
@@ -71,8 +72,6 @@ h2 b{font-weight:900;letter-spacing:-.05em}
 .rail .tick{position:absolute;top:-5px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--pink);transform:translateX(-50%) scale(0);transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
 .rail .tick.on{transform:translateX(-50%) scale(1)}
 .rail .marks{display:flex;justify-content:space-between;font-size:.66rem;letter-spacing:.14em;color:var(--grey);margin-top:1.2rem;text-transform:uppercase}
-.rail .cap{position:absolute;top:-3.6rem;transform:translateX(-50%);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);font-weight:700;white-space:nowrap;opacity:0;transition:opacity .5s,transform .5s}
-.rail .cap.on{opacity:1}
 .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:2.2rem;margin-top:3.6rem}
 .tiles .n{font-size:clamp(2rem,4.4vw,3.8rem);font-weight:900;letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
 .tiles .n.pk{color:var(--pink)}
@@ -94,16 +93,22 @@ h2 b{font-weight:900;letter-spacing:-.05em}
 .hub span{font-size:.84rem;color:var(--stone);font-weight:300}
 .pulse{width:10px;height:10px;border-radius:50%;background:var(--pink);flex:none;animation:pu 1.8s ease infinite}
 @keyframes pu{0%{box-shadow:0 0 0 0 rgba(217,26,91,.5)}70%{box-shadow:0 0 0 14px rgba(217,26,91,0)}100%{box-shadow:0 0 0 0 rgba(217,26,91,0)}}
-.wk{margin-top:3rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;perspective:1200px}
-.wcard{border:1px solid var(--line);background:#fff;border-radius:14px;padding:1.5rem 1.4rem;box-shadow:0 30px 70px -45px rgba(0,0,0,.35);opacity:0;transform:rotateY(-14deg) translateX(50px);transition:opacity .9s cubic-bezier(.19,1,.22,1),transform .9s cubic-bezier(.19,1,.22,1)}
-.wcard:nth-child(2){transition-delay:.12s}.wcard:nth-child(3){transition-delay:.24s}.wcard:nth-child(4){transition-delay:.36s}
-.pin.s2 .wcard{opacity:1;transform:none}
-.wcard .wh{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);font-weight:700}
-.wcard h4{font-size:1rem;font-weight:800;letter-spacing:-.02em;margin:.35rem 0 .8rem}
-.wcard.pk h4{color:var(--pink)}
-.wcard .li{font-size:.78rem;color:#3A3A36;padding:.42rem 0;border-top:1px solid var(--line);display:flex;gap:.55rem}
-.wcard .li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--pink);flex:none;margin-top:.42rem}
-.wcard .li b{font-weight:700;color:var(--ink)}
+/* windows row (month scene) */
+.wins{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.8rem;max-width:1100px}
+.win{border:1px solid var(--line);background:#fff;border-radius:14px;padding:1.2rem 1.3rem;box-shadow:0 24px 60px -45px rgba(0,0,0,.3)}
+.win .wn{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);font-weight:700}
+.win h4{font-size:1.05rem;font-weight:800;letter-spacing:-.02em;margin:.3rem 0 .35rem}
+.win p{font-size:.78rem;color:#55554F;font-weight:400;line-height:1.5}
+/* asks */
+.ask{margin-top:3rem;max-width:960px}
+.ask .a{display:grid;grid-template-columns:44px 1fr auto;gap:1.1rem;padding:1.05rem 0;border-top:1px solid var(--line);align-items:baseline;opacity:0;transform:translateX(-30px);transition:opacity .8s cubic-bezier(.19,1,.22,1),transform .8s cubic-bezier(.19,1,.22,1)}
+.ask .a:nth-child(2){transition-delay:.1s}.ask .a:nth-child(3){transition-delay:.2s}.ask .a:nth-child(4){transition-delay:.3s}.ask .a:nth-child(5){transition-delay:.4s}
+.pin.s2 .ask .a{opacity:1;transform:none}
+.ask .an{width:32px;height:32px;border-radius:50%;border:1.5px solid var(--pink);color:var(--pink);font-weight:800;font-size:.82rem;display:flex;align-items:center;justify-content:center}
+.ask p{font-size:1rem;font-weight:300;color:#3A3A36}
+.ask p b{font-weight:700;color:var(--ink)}
+.ask .dt{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--pink);white-space:nowrap}
+/* counting rules */
 .rule{margin-top:3rem;max-width:880px}
 .rule .r{display:grid;grid-template-columns:30px 1fr;gap:1.1rem;padding:1.05rem 0;border-top:1px solid rgba(255,255,255,.09);align-items:start;opacity:0;transform:translateX(-30px);transition:opacity .8s cubic-bezier(.19,1,.22,1),transform .8s cubic-bezier(.19,1,.22,1)}
 .rule .r:nth-child(2){transition-delay:.12s}.rule .r:nth-child(3){transition-delay:.24s}.rule .r:nth-child(4){transition-delay:.36s}
@@ -114,13 +119,14 @@ h2 b{font-weight:900;letter-spacing:-.05em}
 .rule p{font-size:1rem;font-weight:300;color:var(--stone)}
 .rule p b{font-weight:700;color:inherit}
 footer{padding:8vh 7vw;background:var(--ink);border-top:1px solid rgba(255,255,255,.07)}
-@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}.wk,.tiles{grid-template-columns:1fr 1fr}.actbody .col{max-width:100%}.pin.s2 .hero{display:none}.rail .cap{display:none}}
+@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}.tiles{grid-template-columns:1fr 1fr}.wins{grid-template-columns:1fr}.actbody .col{max-width:100%}.pin.s2 .hero{display:none}.ask .a{grid-template-columns:44px 1fr;grid-auto-rows:auto}.ask .dt{grid-column:2}}
 </style>
 </head>
 <body>
 <div class="prog" id="prog"></div>
 <nav><span>Lume × Skinfluence</span><span>September 2026</span></nav>
 
+<!-- SCENE 1 · OPEN -->
 <div class="scene" data-len="1.6" data-auto="1">
  <div class="pin">
   <div class="bg" style="background-image:url(https://photos.smugmug.com/2026/Lume/n-qR6bRR/Selects/i-vVkKNvt/0/NNhdvMn4L2vshqRqF4kZNdGStPxXJ5HK82vPKfNK2/X2/9I9A6262-X2.jpg)"></div>
@@ -134,15 +140,39 @@ footer{padding:8vh 7vw;background:var(--ink);border-top:1px solid rgba(255,255,2
  </div>
 </div>
 
+<!-- SCENE 2 · WHY THIS STRATEGY -->
+<div class="scene" data-len="2.8">
+ <div class="pin">
+  <div class="glow" style="width:60vw;height:60vw;background:rgba(217,26,91,.15);right:-18vw;top:-16vw"></div>
+  <div class="hero">48%</div>
+  <div class="herolab">of your guests visit once and never come back.</div>
+  <div class="actbody">
+   <div class="col">
+    <div class="eyebrow fx f2">Why this strategy</div>
+    <div class="acttitle fx f2">The problem<br><span>is the return visit.</span></div>
+    <div class="steps">
+     <div class="s fx f3"><div class="n">1</div><p><b>9,692 guests have paid Lume.</b> Almost half came once and never returned.</p></div>
+     <div class="s fx f4"><div class="n">2</div><p><b>That gap is the opportunity.</b> The median guest spends $210 and stops. The average guest is worth $1,067. Closing that gap beats any new-guest ad.</p></div>
+     <div class="s fx f5"><div class="n">3</div><p><b>Banked value closes it.</b> Every September offer puts credit on the guest's account: units, drips, sessions, a $400 credit. A discount buys one visit. A bank schedules a year.</p></div>
+    </div>
+    <p class="note fx f6">Guest counts and spend from Lume's Zenoti account, full guest history.</p>
+   </div>
+  </div>
+ </div>
+</div>
+
+<!-- SCENE 3 · THE MONTH -->
 <div class="scene light" data-len="2.6">
  <div class="pin light">
   <div class="wrap">
    <div class="eyebrow fx f1">The month at a glance</div>
-   <h2 class="fx f1">A quiet first week.<br>Then <b>three windows.</b></h2>
-   <div class="rail" id="rail">
-    <div class="cap" data-at=".30" style="left:33%">Bank Your Botox · 9–12</div>
-    <div class="cap" data-at=".52" style="left:55%">Sunday Reset · 15–19</div>
-    <div class="cap" data-at=".76" style="left:83%">Laser Season · 21–30</div>
+   <h2 class="fx f1">A quiet build week.<br>Then <b>three offer windows.</b></h2>
+   <div class="wins">
+    <div class="win fx f2"><div class="wn">Window one · Sept 9 to 12</div><h4>Bank Your Botox</h4><p>$999 banks 111 units at $9 a unit, used over 12 months. Free IV drip included.</p></div>
+    <div class="win fx f3"><div class="wn">Window two · Sept 15 to 19</div><h4>Sunday Reset</h4><p>Buy one custom IV drip, get one free. Both banked, redeemed on Sundays all year.</p></div>
+    <div class="win fx f4"><div class="wn">Window three · Sept 21 to 30</div><h4>Laser Season</h4><p>VIPs first: buy 3, get 1. Then public: buy 3, free consult plus a $400 laser credit.</p></div>
+   </div>
+   <div class="rail" id="rail" style="margin-top:3rem">
     <div class="track">
      <div class="segfill"></div>
      <div class="tick" data-at=".27" style="left:27%"></div>
@@ -154,17 +184,18 @@ footer{padding:8vh 7vw;background:var(--ink);border-top:1px solid rgba(255,255,2
     </div>
     <div class="marks"><span>Sept 1</span><span>9</span><span>15</span><span>21</span><span>30</span></div>
    </div>
-   <div class="tiles">
-    <div class="fx f2"><div class="n" data-count="74">0</div><div class="k">Past injectable guests<br>warm list, offer one</div></div>
-    <div class="fx f3"><div class="n" data-count="619">0</div><div class="k">Past IV guests<br>warm list, offer two</div></div>
-    <div class="fx f4"><div class="n" data-count="101">0</div><div class="k">Past skin-treatment guests<br>VIP list, offer three</div></div>
-    <div class="fx f5"><div class="n pk" data-count="7700" data-suffix="">0</div><div class="k">Email list reach<br>every send, every sale tracked</div></div>
+   <div class="tiles" style="margin-top:2.8rem">
+    <div class="fx f4"><div class="n" data-count="74">0</div><div class="k">Warm list · Bank Your Botox<br>past injectable guests</div></div>
+    <div class="fx f5"><div class="n" data-count="619">0</div><div class="k">Warm list · Sunday Reset<br>past IV guests</div></div>
+    <div class="fx f5"><div class="n" data-count="101">0</div><div class="k">VIP list · Laser Season<br>past skin-treatment guests</div></div>
+    <div class="fx f6"><div class="n pk" data-count="7700" data-suffix="">0</div><div class="k">Email reach, every offer<br>every send, every sale tracked</div></div>
    </div>
-   <p class="note fx f5">Audience counts from Lume's Zenoti account, Feb 1 to Aug 17 2026. Week one: website and booking system go live, pages built, automations tested, influencers briefed.</p>
+   <p class="note fx f6">Audience counts from Lume's Zenoti account, Feb 1 to Aug 17 2026. Week one: website and booking system go live, pages built, automations tested, influencers briefed.</p>
   </div>
  </div>
 </div>
 
+<!-- SCENE 4 · OFFER ONE -->
 <div class="scene" data-len="3">
  <div class="pin">
   <div class="bg" style="background-image:url(https://photos.smugmug.com/2026/Lume/n-qR6bRR/Selects/i-WWTvFgx/0/LL2rJt9kDpH6jJhDFQB828LnLvkktrZWfq6M4z828/X2/9I9A6378-X2.jpg);background-position:70% 30%"></div>
@@ -192,6 +223,7 @@ footer{padding:8vh 7vw;background:var(--ink);border-top:1px solid rgba(255,255,2
  </div>
 </div>
 
+<!-- SCENE 5 · OFFER TWO -->
 <div class="scene" data-len="3">
  <div class="pin">
   <div class="bg" style="background-image:url(https://photos.smugmug.com/2026/Lume/n-qR6bRR/Selects/i-hLrC6gF/0/Kc4pjKXHXwnDshSzXsdwxNtK69kCzQF23jGXTh7QZ/X2/9I9A6581-X2.jpg);background-position:65% center"></div>
@@ -219,6 +251,7 @@ footer{padding:8vh 7vw;background:var(--ink);border-top:1px solid rgba(255,255,2
  </div>
 </div>
 
+<!-- SCENE 6 · OFFER THREE -->
 <div class="scene" data-len="3">
  <div class="pin">
   <div class="bg" style="background-image:url(https://photos.smugmug.com/2026/Lume/n-qR6bRR/Selects/i-cnDc3TV/0/Mj9ZVrRGDtrFpq5CdCt5LkCDs6MMz9Jwzn3CQ6xHj/X2/9I9A6798-X2.jpg);background-position:75% center"></div>
@@ -246,6 +279,7 @@ footer{padding:8vh 7vw;background:var(--ink);border-top:1px solid rgba(255,255,2
  </div>
 </div>
 
+<!-- SCENE 7 · CHANNELS -->
 <div class="scene" data-len="2">
  <div class="pin">
   <div class="wrap">
@@ -265,49 +299,42 @@ footer{padding:8vh 7vw;background:var(--ink);border-top:1px solid rgba(255,255,2
  </div>
 </div>
 
-<div class="scene light" data-len="2">
- <div class="pin light" style="background:#EDEDEA">
+<!-- SCENE 8 · INFLUENCERS -->
+<div class="scene" data-len="2.2">
+ <div class="pin">
+  <div class="glow" style="width:55vw;height:55vw;background:rgba(217,26,91,.13);left:-16vw;top:-14vw"></div>
   <div class="wrap">
-   <div class="eyebrow fx f1">Week by week</div>
-   <h2 class="fx f1">What ships, <b>and when.</b></h2>
-   <div class="wk">
-    <div class="wcard pk">
-     <div class="wh">Week 1 · Sept 1 to 7</div><h4>Build week</h4>
-     <div class="li"><span>Booking fork and new-client form live in Podium</span></div>
-     <div class="li"><span>Three offer pages built, per-channel links issued</span></div>
-     <div class="li"><span>Three automations live and tested</span></div>
-     <div class="li"><span>Influencers briefed, links issued</span></div>
-     <div class="li"><span>No email sends. The list rests.</span></div>
-    </div>
-    <div class="wcard">
-     <div class="wh">Week 2 · Sept 8 to 14</div><h4>Bank Your Botox</h4>
-     <div class="li"><span><b>Tue 9</b> warm-list email, page opens</span></div>
-     <div class="li"><span><b>Wed 10</b> SMS to warm list</span></div>
-     <div class="li"><span><b>Thu 11</b> full-list email</span></div>
-     <div class="li"><span><b>Sat 12</b> last-day resend to openers</span></div>
-     <div class="li"><span>Boost live all window, ~$330</span></div>
-    </div>
-    <div class="wcard">
-     <div class="wh">Week 3 · Sept 15 to 19</div><h4>Sunday Reset</h4>
-     <div class="li"><span><b>Tue 15</b> full-list launch email</span></div>
-     <div class="li"><span><b>Wed/Thu</b> targeted email to 619 IV guests</span></div>
-     <div class="li"><span><b>Sat 19</b> ends-tonight email + noon SMS to clickers</span></div>
-     <div class="li"><span>Page closes midnight Saturday</span></div>
-     <div class="li"><span>Boost live all window, ~$330</span></div>
-    </div>
-    <div class="wcard">
-     <div class="wh">Week 4 · Sept 21 to 30</div><h4>Laser Season</h4>
-     <div class="li"><span><b>Mon 21</b> VIP email + SMS to 101 skin guests</span></div>
-     <div class="li"><span><b>26 to 27</b> public teaser</span></div>
-     <div class="li"><span><b>Mon 28</b> public launch, full list</span></div>
-     <div class="li"><span><b>Tue 29</b> $400-credit push · <b>Wed 30</b> final day</span></div>
-     <div class="li"><span>Boost live from the 28th, ~$340</span></div>
-    </div>
+   <div class="eyebrow fx f1">The influencer program</div>
+   <h2 class="fx f1">Three creators.<br><b>Measured like a channel.</b></h2>
+   <div class="rule">
+    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p><b>You pick three</b> from our shortlist of ten. Briefs, contracts and scheduling are ours to run, inside the current scope. No added fee.</p></div>
+    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p><b>One post per offer window.</b> Each creator carries their own coded link to the offer page. Every sale tags back to the post that sent it.</p></div>
+    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p><b>Creator compensation sits with Lume</b>: gifted services or an agreed fee per creator. We negotiate it, you approve it.</p></div>
+    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p><b>September is the audition.</b> If the posts sell, influencers become a budgeted October channel with numbers behind it. If they do not, we cut it and say so.</p></div>
    </div>
   </div>
  </div>
 </div>
 
+<!-- SCENE 9 · WHAT WE NEED FROM YOU -->
+<div class="scene light" data-len="2.2">
+ <div class="pin light" style="background:#EDEDEA">
+  <div class="wrap">
+   <div class="eyebrow fx f1">What we need from you</div>
+   <h2 class="fx f1">Five decisions <b>by September 5.</b></h2>
+   <div class="ask">
+    <div class="a"><div class="an">1</div><p><b>Pick three influencers</b> from the shortlist of ten.</p><span class="dt">Aug 29</span></div>
+    <div class="a"><div class="an">2</div><p><b>Confirm Sunday IV capacity</b> for a year of redemptions.</p><span class="dt">Sept 3</span></div>
+    <div class="a"><div class="an">3</div><p><b>Approve the copy</b>: email, SMS and the social calendar.</p><span class="dt">Sept 3</span></div>
+    <div class="a"><div class="an">4</div><p><b>Configure banked credits</b> in the booking system, with us.</p><span class="dt">Sept 5</span></div>
+    <div class="a"><div class="an">5</div><p><b>Set gifting and repeat-purchase rules</b> for each offer.</p><span class="dt">Sept 5</span></div>
+   </div>
+   <p class="note fx f3">Everything else is ours: pages, links, automations, copy, and the Illinois check on advertised unit pricing, done by Aug 27. All of it live by September 8.</p>
+  </div>
+ </div>
+</div>
+
+<!-- SCENE 10 · COUNTING -->
 <div class="scene" data-len="2">
  <div class="pin">
   <div class="glow" style="width:60vw;height:60vw;background:rgba(217,26,91,.14);right:-20vw;bottom:-22vw"></div>
@@ -320,11 +347,12 @@ footer{padding:8vh 7vw;background:var(--ink);border-top:1px solid rgba(255,255,2
     <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p>We review sales per channel <b>daily, mid-window</b>. What works gets more. What does not gets cut.</p></div>
     <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p>During each window: <b>one number a day</b>. Sales, revenue, best channel.</p></div>
    </div>
-   <p class="note fx f2">To confirm before publishing: Illinois rules on advertised unit pricing, banked credits in Podium, Sunday IV capacity, gifting and repeat-purchase rules.</p>
+   <p class="note fx f2">Mid-window, nothing is locked. A channel that is not selling loses its budget the same day.</p>
   </div>
  </div>
 </div>
 
+<!-- SCENE 11 · CLOSE -->
 <div class="scene" data-len="1.4">
  <div class="pin">
   <div class="bg" style="background-image:url(https://photos.smugmug.com/2026/Lume/n-qR6bRR/Selects/i-kTmhQpw/0/MZhn4KjTvgKLpvxHxKTMM3n6c86q2gDVsKCsBLTxT/X2/9I9A6723-X2.jpg)"></div>
