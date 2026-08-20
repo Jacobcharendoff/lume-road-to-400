@@ -104,6 +104,13 @@ h2 b{font-weight:900;letter-spacing:-.05em}
 .win .wn{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);font-weight:700}
 .win h4{font-size:1.05rem;font-weight:800;letter-spacing:-.02em;margin:.3rem 0 .35rem}
 .win p{font-size:.78rem;color:#55554F;font-weight:400;line-height:1.5}
+/* influencer picks */
+.picks{margin-top:2.2rem;max-width:900px}
+.picks .ph{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);font-weight:700;margin-bottom:.4rem}
+.picks .p{display:grid;grid-template-columns:170px 160px 1fr;gap:1rem;padding:.75rem 0;border-top:1px solid rgba(255,255,255,.09);font-size:.85rem;align-items:baseline}
+.picks .nm{font-weight:800;white-space:nowrap}
+.picks .hd{color:var(--pink);font-weight:700;font-size:.72rem;letter-spacing:.06em;white-space:nowrap}
+.picks .why{font-weight:300;color:var(--stone)}
 /* asks */
 .ask{margin-top:3rem;max-width:960px}
 .ask .a{display:grid;grid-template-columns:44px 1fr auto;gap:1.1rem;padding:1.05rem 0;border-top:1px solid var(--line);align-items:baseline;opacity:0;transform:translateX(-30px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)}
@@ -124,7 +131,7 @@ h2 b{font-weight:900;letter-spacing:-.05em}
 .rule p{font-size:1rem;font-weight:300;color:var(--stone)}
 .rule p b{font-weight:700;color:inherit}
 footer{padding:8vh 7vw;background:var(--ink);border-top:1px solid rgba(255,255,255,.07)}
-@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}.tiles{grid-template-columns:1fr 1fr}.wins{grid-template-columns:1fr}.actbody .col{max-width:100%}.pin.s2 .hero{display:none}.ask .a{grid-template-columns:44px 1fr;grid-auto-rows:auto}.ask .dt{grid-column:2}}
+@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}.tiles{grid-template-columns:1fr 1fr}.wins{grid-template-columns:1fr}.actbody .col{max-width:100%}.pin.s2 .hero{display:none}.ask .a{grid-template-columns:44px 1fr;grid-auto-rows:auto}.ask .dt{grid-column:2}.picks .p{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -148,8 +155,9 @@ footer{padding:8vh 7vw;background:var(--ink);border-top:1px solid rgba(255,255,2
 <!-- SCENE 2 · WHY THIS STRATEGY -->
 <div class="scene" data-len="2.8">
  <div class="pin">
-  <div class="glow" style="width:60vw;height:60vw;background:rgba(217,26,91,.15);right:-18vw;top:-16vw"></div>
-  <div class="hero">48%</div>
+  <div class="bg" style="background-image:url(https://photos.smugmug.com/2026/Lume/n-qR6bRR/Selects/i-k5mN78T/0/KNtKwqHBgKZf6SPnR2Wsr2v37rwVGjnBQWMFRtnfb/X2/9I9A6294-X2.jpg);background-position:72% center"></div>
+  <div class="shade"></div>
+  <div class="hero" style="position:relative;z-index:2">48%</div>
   <div class="herolab">of your guests visit once and never come back.</div>
   <div class="actbody">
    <div class="col">
@@ -287,11 +295,34 @@ footer{padding:8vh 7vw;background:var(--ink);border-top:1px solid rgba(255,255,2
  </div>
 </div>
 
-<!-- SCENE 7 · CHANNELS -->
-<div class="scene" data-len="2">
+<!-- SCENE 7 · INFLUENCERS -->
+<div class="scene" data-len="2.6">
+ <div class="pin">
+  <div class="bg" style="background-image:url(https://photos.smugmug.com/2026/Lume/n-qR6bRR/Selects/i-ftbRfd4/0/LG6B6RW2F3HpB7vzsWZgRB6RdqKM65jCtz6nVSfpV/X2/9I9A6696-X2.jpg);background-position:78% center"></div>
+  <div class="shade"></div>
+  <div class="wrap">
+   <div class="eyebrow fx f1">The influencer program</div>
+   <h2 class="fx f1">Three creators.<br><b>Measured like a channel.</b></h2>
+   <div class="rule" style="margin-top:2.2rem">
+    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p><b>You pick three, we run everything.</b> Briefs, contracts, scheduling, coded links. Inside the current scope, no added fee. Compensation sits with Lume: gifted services or an agreed fee per creator.</p></div>
+    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p><b>One post per offer window, one coded link each.</b> Every sale tags back to the post that sent it.</p></div>
+    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p><b>September is the audition.</b> If the posts sell, influencers become a budgeted October channel. If they do not, we cut it and say so.</p></div>
+   </div>
+   <div class="picks fx f4"><div class="ph">Our top three from the research of ten</div>
+    <div class="p"><span class="nm">Whitney Buha</span><span class="hd">@somethingwhitty · 409K</span><span class="why">Chicago lifestyle and home creator. Commerce-driven posts, millennial female audience. Built to convert offers, not just reach.</span></div>
+    <div class="p"><span class="nm">Sam Cushing</span><span class="hd">@sam.cushing · 895K</span><span class="why">Chicago fitness and grooming creator. Fits IV, laser and men's wellness. Already known to Lume.</span></div>
+    <div class="p"><span class="nm">Shaina Hurley</span><span class="hd">@shaina.hurley · 227K</span><span class="why">Love Is Blind personality and hairstylist with Chicago roots. Beauty credibility and reality reach at a workable size.</span></div>
+   </div>
+   <p class="note fx f5">Benchmark first: Matt Johnson (@supmattj) already carries a live Lume code, MATT25. We pull its redemptions before the first post so this channel starts with a baseline. Final picks are yours; swap any of these from the shortlist of ten.</p>
+  </div>
+ </div>
+</div>
+
+<!-- SCENE 8 · CHANNELS + COUNTING -->
+<div class="scene" data-len="2.2">
  <div class="pin">
   <div class="wrap">
-   <div class="eyebrow fx f1">How it connects</div>
+   <div class="eyebrow fx f1">How it connects, and how we count it</div>
    <h2 class="fx f1">Six channels.<br><b>One booking page.</b></h2>
    <div class="flow">
     <div class="fl"><svg class="ic" viewBox="0 0 40 40"><rect x="6" y="10" width="28" height="20" rx="3"/><path d="M6 13l14 10 14-10"/></svg><h4>Email</h4><p>Launch, targeted and deadline sends per offer. Resends to openers only.</p></div>
@@ -303,23 +334,7 @@ footer{padding:8vh 7vw;background:var(--ink);border-top:1px solid rgba(255,255,2
    </div>
    <div class="beam fx f2"><i></i></div>
    <div class="hub fx f2"><div class="pulse"></div><div><b>Every channel carries its own link to the same page.</b> <span>Every sale is tagged to the channel that sent it. Built in Podium, live by September 8.</span></div></div>
-  </div>
- </div>
-</div>
-
-<!-- SCENE 8 · INFLUENCERS -->
-<div class="scene" data-len="2.2">
- <div class="pin">
-  <div class="glow" style="width:55vw;height:55vw;background:rgba(217,26,91,.13);left:-16vw;top:-14vw"></div>
-  <div class="wrap">
-   <div class="eyebrow fx f1">The influencer program</div>
-   <h2 class="fx f1">Three creators.<br><b>Measured like a channel.</b></h2>
-   <div class="rule">
-    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p><b>You pick three</b> from our shortlist of ten. Briefs, contracts and scheduling are ours to run, inside the current scope. No added fee.</p></div>
-    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p><b>One post per offer window.</b> Each creator carries their own coded link to the offer page. Every sale tags back to the post that sent it.</p></div>
-    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p><b>Creator compensation sits with Lume</b>: gifted services or an agreed fee per creator. We negotiate it, you approve it.</p></div>
-    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p><b>September is the audition.</b> If the posts sell, influencers become a budgeted October channel with numbers behind it. If they do not, we cut it and say so.</p></div>
-   </div>
+   <div class="hub fx f3" style="border-color:rgba(255,255,255,.16);background:linear-gradient(90deg,rgba(255,255,255,.05),transparent)"><div class="pulse" style="background:#fff"></div><div><b>Revenue equals units sold. Nothing else.</b> <span>Each offer is a product that exists only in its window. We review channels daily while it runs and send one number a day: sales, revenue, best channel. What sells gets more. What does not gets cut.</span></div></div>
   </div>
  </div>
 </div>
@@ -329,38 +344,20 @@ footer{padding:8vh 7vw;background:var(--ink);border-top:1px solid rgba(255,255,2
  <div class="pin light" style="background:#EDEDEA">
   <div class="wrap">
    <div class="eyebrow fx f1">What we need from you</div>
-   <h2 class="fx f1">Five decisions <b>by September 5.</b></h2>
+   <h2 class="fx f1">Five decisions <b>by Wednesday, Aug 26.</b></h2>
    <div class="ask">
-    <div class="a"><div class="an">1</div><p><b>Pick three influencers</b> from the shortlist of ten.</p><span class="dt">Aug 29</span></div>
-    <div class="a"><div class="an">2</div><p><b>Confirm Sunday IV capacity</b> for a year of redemptions.</p><span class="dt">Sept 3</span></div>
-    <div class="a"><div class="an">3</div><p><b>Approve the copy</b>: email, SMS and the social calendar.</p><span class="dt">Sept 3</span></div>
-    <div class="a"><div class="an">4</div><p><b>Configure banked credits</b> in the booking system, with us.</p><span class="dt">Sept 5</span></div>
-    <div class="a"><div class="an">5</div><p><b>Set gifting and repeat-purchase rules</b> for each offer.</p><span class="dt">Sept 5</span></div>
+    <div class="a"><div class="an">1</div><p><b>Pick three influencers</b> from the shortlist of ten. Our top three are on the previous slide.</p><span class="dt">Aug 26</span></div>
+    <div class="a"><div class="an">2</div><p><b>Confirm Sunday IV capacity</b> for a year of redemptions.</p><span class="dt">Aug 26</span></div>
+    <div class="a"><div class="an">3</div><p><b>Approve the copy direction</b>: email, SMS and the social calendar.</p><span class="dt">Aug 26</span></div>
+    <div class="a"><div class="an">4</div><p><b>Confirm banked credits</b> can sit on the account in the booking system, with us.</p><span class="dt">Aug 26</span></div>
+    <div class="a"><div class="an">5</div><p><b>Set gifting and repeat-purchase rules</b> for each offer.</p><span class="dt">Aug 26</span></div>
    </div>
-   <p class="note fx f3">Everything else is ours: pages, links, automations, copy, and the Illinois check on advertised unit pricing, done by Aug 27. All of it live by September 8.</p>
+   <p class="note fx f3">One meeting settles all five. Everything else is ours: pages, links, automations, copy, and the Illinois check on advertised unit pricing, done by Aug 27. All of it live by September 8.</p>
   </div>
  </div>
 </div>
 
-<!-- SCENE 10 · COUNTING -->
-<div class="scene" data-len="2">
- <div class="pin">
-  <div class="glow" style="width:60vw;height:60vw;background:rgba(217,26,91,.14);right:-20vw;bottom:-22vw"></div>
-  <div class="wrap">
-   <div class="eyebrow fx f1">How we count it</div>
-   <h2 class="fx f1">Revenue equals <b>units sold.</b><br>Nothing else.</h2>
-   <div class="rule">
-    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p>Each offer is a product that <b>only exists during its window</b>. Every sale of it is campaign revenue. No estimates.</p></div>
-    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p>Every channel carries <b>its own link</b>. Revenue and cost per channel, per day.</p></div>
-    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p>We review sales per channel <b>daily, mid-window</b>. What works gets more. What does not gets cut.</p></div>
-    <div class="r"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><p>During each window: <b>one number a day</b>. Sales, revenue, best channel.</p></div>
-   </div>
-   <p class="note fx f2">Mid-window, nothing is locked. A channel that is not selling loses its budget the same day.</p>
-  </div>
- </div>
-</div>
-
-<!-- SCENE 11 · CLOSE -->
+<!-- SCENE 10 · CLOSE -->
 <div class="scene" data-len="1.4">
  <div class="pin">
   <div class="bg" style="background-image:url(https://photos.smugmug.com/2026/Lume/n-qR6bRR/Selects/i-kTmhQpw/0/MZhn4KjTvgKLpvxHxKTMM3n6c86q2gDVsKCsBLTxT/X2/9I9A6723-X2.jpg)"></div>
