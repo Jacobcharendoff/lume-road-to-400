@@ -51,6 +51,11 @@ h1{font-weight:600;font-size:clamp(28px,4vw,40px);letter-spacing:-.034em;line-he
 .node .hd .ch{font-size:11.5px;font-weight:600;color:var(--label);letter-spacing:.02em}
 .node .hd .who{margin-left:auto;font-size:11px;color:var(--mid)}
 .node .bd{padding:11px 12px 13px}
+.node .dy{align-self:flex-start;display:inline-block;border:1px solid var(--black);
+  padding:2px 7px;font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--black);margin-bottom:7px}
+.node.human .dy{background:var(--black);color:#fff}
+.node.out .dy{border-color:var(--mid);color:var(--label)}
 .node .nm{font-size:14.5px;font-weight:600;color:var(--black);letter-spacing:-.012em;line-height:1.25}
 .node .say{font-size:13.5px;line-height:1.48;color:var(--black);margin-top:8px;
   border-left:2px solid var(--rule);padding-left:11px}
@@ -190,7 +195,7 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
 
         <div class="node human">
           <div class="hd"><span class="ic"><svg><use href="#i-person"/></svg></span><span class="ch">AT THE COUNTER</span><span class="who">Front desk</span></div>
-          <div class="bd"><div class="nm">The rebook ask</div>
+          <div class="bd"><div class="dy">Visit day &middot; at checkout</div><div class="nm">The rebook ask</div>
             <div class="say">Before you go, want me to get your next one in the book? Most people come back in about {{weeks}} weeks for this, and {{day}} mornings are usually the easiest to get.</div>
             <div class="flag k"><b>Never ask it as a yes or no question</b>"Would you like to book another appointment?" invites one word, and at a counter with a card in their hand that word is usually no.</div>
           </div>
@@ -200,7 +205,7 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
 
         <div class="node">
           <div class="hd"><span class="ic"><svg><use href="#i-star"/></svg></span><span class="ch">SMS</span><span class="who">Podium</span></div>
-          <div class="bd"><div class="nm">How did we do?</div>
+          <div class="bd"><div class="dy">Visit day &middot; that evening</div><div class="nm">How did we do?</div>
             <div class="say">Hey {{first_name}}, thanks for coming in today. How did we do, 1 to 5?</div>
             <div class="say"><u>Four or five</u>Amazing, thank you. Would you mind putting that on Google? It takes about twenty seconds. {{review_link}}</div>
             <div class="say"><u>One to three</u>Thanks for telling us, that's really useful. Is now an alright time for a quick call?</div>
@@ -225,19 +230,19 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
             <div class="lseq">
             <div class="node">
               <div class="hd"><span class="ic"><svg><use href="#i-chat"/></svg></span><span class="ch">SMS</span><span class="who">Podium</span></div>
-              <div class="bd"><div class="nm">Get ready</div>
+              <div class="bd"><div class="dy">3 days before the visit</div><div class="nm">Get ready</div>
                 <div class="say">Hi {{first_name}}, looking forward to seeing you {{day}}. Two things that help: come without makeup on, and drink plenty of water the day before.</div></div>
             </div>
             <div class="arw"><b>3 days before</b></div>
             <div class="node">
               <div class="hd"><span class="ic"><svg><use href="#i-cal"/></svg></span><span class="ch">SMS</span><span class="who">Podium</span></div>
-              <div class="bd"><div class="nm">Reminder</div>
+              <div class="bd"><div class="dy">48 hours before the visit</div><div class="nm">Reminder</div>
                 <div class="say">Hi {{first_name}}, quick reminder you're booked in with us {{day}} at {{time}}. Reply C to confirm, or call us if you need to move it.</div></div>
             </div>
             <div class="arw"><b>48 hours before</b><i>no-show only &rarr;</i></div>
             <div class="node">
               <div class="hd"><span class="ic"><svg><use href="#i-back"/></svg></span><span class="ch">SMS</span><span class="who">Podium</span></div>
-              <div class="bd"><div class="nm">We missed you</div>
+              <div class="bd"><div class="dy">Day of the missed visit</div><div class="nm">We missed you</div>
                 <div class="say">Hi {{first_name}}, we had you down for today and didn't see you. No problem at all. Want me to find you another time this week?</div></div>
             </div>
             </div>
@@ -248,19 +253,19 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
             <div class="lseq">
             <div class="node">
               <div class="hd"><span class="ic"><svg><use href="#i-chat"/></svg></span><span class="ch">SMS</span><span class="who">Podium</span></div>
-              <div class="bd"><div class="nm">Ask, no offer</div>
+              <div class="bd"><div class="dy">Day 2 after the visit</div><div class="nm">Ask, no offer</div>
                 <div class="say">Hey {{first_name}}, it's the team at Lume. So good having you in. Want us to save you a spot for next time? Tell us a day that works and we'll sort the rest.</div></div>
             </div>
             <div class="arw"><b>48 hours</b><i>no reply</i></div>
             <div class="node">
               <div class="hd"><span class="ic"><svg><use href="#i-mail"/></svg></span><span class="ch">EMAIL</span><span class="who">Podium</span></div>
-              <div class="bd"><div class="nm">Ask again, still no offer</div>
+              <div class="bd"><div class="dy">Day 3 after the visit</div><div class="nm">Ask again, still no offer</div>
                 <div class="say"><u>Subject &middot; Shall we hold your next one?</u>Nothing to sign up for and nothing to decide today. If you tell us roughly when suits, we'll put a time aside and confirm it back to you.</div></div>
             </div>
             <div class="arw"><b>Day 3</b><i>no reply</i></div>
             <div class="node human">
               <div class="hd"><span class="ic"><svg><use href="#i-phone"/></svg></span><span class="ch">PHONE</span><span class="who">Front desk</span></div>
-              <div class="bd"><div class="nm">The check-in call</div>
+              <div class="bd"><div class="dy">Day 7 after the visit</div><div class="nm">The check-in call</div>
                 <div class="say">Hi {{first_name}}, it's {{name}} from Lume. Nothing's wrong, I just wanted to check in after your visit. How have you been feeling since?</div>
                 <div class="say"><u>If it comes down to money</u>Completely fair. Can I show you what it works out to per session if you do a few together? For most people that lands lower than booking one at a time.</div>
                 <div class="why"><b>Log every outcome, including no answer.</b> The only honest signal Lume will have about why guests do not come back.</div>
@@ -269,7 +274,7 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
             <div class="arw"><b>Day 7</b><i>no answer</i></div>
             <div class="node">
               <div class="hd"><span class="ic"><svg><use href="#i-money"/></svg></span><span class="ch">SMS</span><span class="who">Podium</span></div>
-              <div class="bd"><div class="nm">The last nudge, with an offer</div>
+              <div class="bd"><div class="dy">Day 10 after the visit</div><div class="nm">The last nudge, with an offer</div>
                 <div class="say">Hey {{first_name}}, last nudge from us. Book your next visit before the end of the month and we'll throw in a vitamin shot or a cryo session, on us. Want us to hold you a spot?</div>
                 <div class="why">The only message in any journey carrying an offer. It goes only to guests who ignored two free asks and a phone call.</div>
               </div>
@@ -292,7 +297,7 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
 
         <div class="node human">
           <div class="hd"><span class="ic"><svg><use href="#i-person"/></svg></span><span class="ch">IN THE ROOM</span><span class="who">Provider</span></div>
-          <div class="bd"><div class="nm">The plan conversation</div>
+          <div class="bd"><div class="dy">At the second visit</div><div class="nm">The plan conversation</div>
             <div class="say"><u>Three questions, in this order</u>What made you come in the first time? Where would you like to get to with this? Has anything got in the way before?</div>
             <div class="say"><u>Then, and only then</u>Based on that, here's what I'd suggest, and here's what I wouldn't bother with. That's realistically {{n}} sessions over {{period}}.</div>
             <div class="why"><b>Three ways to lose it.</b> List services. Quote a price before you know what they want. Offer everything. A menu gets compared on price.</div>
@@ -343,7 +348,7 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
 
         <div class="node">
           <div class="hd"><span class="ic"><svg><use href="#i-chat"/></svg></span><span class="ch">SMS</span><span class="who">Podium</span></div>
-          <div class="bd"><div class="nm">We've got you</div>
+          <div class="bd"><div class="dy">Day 0 &middot; 1 minute after enquiry</div><div class="nm">We've got you</div>
             <div class="say">Hi {{first_name}}, it's Lume Wellness. We've got your request and someone from the team will call you shortly from {{clinic_number}} to find you a time. Save the number so you know it's us.</div>
             <div class="why"><b>The number is the point.</b> An unknown Chicago number goes to voicemail.</div>
           </div>
@@ -353,7 +358,7 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
 
         <div class="node human">
           <div class="hd"><span class="ic"><svg><use href="#i-phone"/></svg></span><span class="ch">PHONE</span><span class="who">Front desk</span></div>
-          <div class="bd"><div class="nm">First call</div>
+          <div class="bd"><div class="dy">Day 0 &middot; within 1 business hour</div><div class="nm">First call</div>
             <div class="say">Hi {{first_name}}, it's {{name}} from Lume Wellness. You got in touch about coming in. Is now an alright time to find you a slot?</div>
             <div class="flag"><b>One business hour</b>This is the standard everything else on this board depends on. Notification at four hours.</div>
           </div>
@@ -363,7 +368,7 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
 
         <div class="node">
           <div class="hd"><span class="ic"><svg><use href="#i-chat"/></svg></span><span class="ch">SMS</span><span class="who">Podium</span></div>
-          <div class="bd"><div class="nm">Text after a missed call</div>
+          <div class="bd"><div class="dy">Day 0 &middot; 1 hour after the call</div><div class="nm">Text after a missed call</div>
             <div class="say">Hi {{first_name}}, just tried you from Lume. Easier to text? Tell us roughly when suits and what you're interested in, and we'll come back with two options.</div></div>
         </div>
 
@@ -371,7 +376,7 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
 
         <div class="node human">
           <div class="hd"><span class="ic"><svg><use href="#i-phone"/></svg></span><span class="ch">PHONE</span><span class="who">Front desk</span></div>
-          <div class="bd"><div class="nm">Second call</div>
+          <div class="bd"><div class="dy">Day 2</div><div class="nm">Second call</div>
             <div class="say">Same opener, a different hour of the day.</div>
             <div class="why">Most people are reachable at some point. Rarely the one you first tried.</div></div>
         </div>
@@ -380,7 +385,7 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
 
         <div class="node">
           <div class="hd"><span class="ic"><svg><use href="#i-mail"/></svg></span><span class="ch">EMAIL</span><span class="who">Podium</span></div>
-          <div class="bd"><div class="nm">What to expect</div>
+          <div class="bd"><div class="dy">Day 3</div><div class="nm">What to expect</div>
             <div class="say"><u>Subject &middot; What actually happens on a first visit</u>A first visit here starts with a conversation, not a treatment. Somebody sits down with you, asks what you're after, and tells you honestly what they'd suggest and what they wouldn't. Nothing gets decided on the spot. If you'd rather pick a time yourself: {{booking_link}}</div></div>
         </div>
 
@@ -388,7 +393,7 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
 
         <div class="node human">
           <div class="hd"><span class="ic"><svg><use href="#i-phone"/></svg></span><span class="ch">PHONE</span><span class="who">Front desk</span></div>
-          <div class="bd"><div class="nm">Third call, then a voicemail</div>
+          <div class="bd"><div class="dy">Day 5</div><div class="nm">Third call, then a voicemail</div>
             <div class="say">Hi {{first_name}}, {{name}} at Lume. Third time trying you, so I'll leave it here. If you still want to come in, text this number any time and we'll sort it out. Thanks.</div></div>
         </div>
 
@@ -423,7 +428,7 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
 
         <div class="node">
           <div class="hd"><span class="ic"><svg><use href="#i-chat"/></svg></span><span class="ch">SMS</span><span class="who">Podium</span></div>
-          <div class="bd"><div class="nm">Want me to hold it?</div>
+          <div class="bd"><div class="dy">Day 0 &middot; 1 hour after they stop</div><div class="nm">Want me to hold it?</div>
             <div class="say">Hi {{first_name}}, it's Lume Wellness. Looks like you were picking a time with us and didn't get to finish. Want me to hold something for you? Reply with a day that works and I'll take care of it.</div></div>
         </div>
 
@@ -431,7 +436,7 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
 
         <div class="node">
           <div class="hd"><span class="ic"><svg><use href="#i-mail"/></svg></span><span class="ch">EMAIL</span><span class="who">Podium</span></div>
-          <div class="bd"><div class="nm">Three reasons people stop</div>
+          <div class="bd"><div class="dy">Day 2</div><div class="nm">Three reasons people stop</div>
             <div class="say"><u>Subject &middot; Want us to hold a time for you?</u>You started booking with us and didn't get to finish. That usually comes down to one of three things: you weren't sure which option was right, you couldn't find a time that worked, or you wanted to talk to somebody first. All three are easy to sort out. Reply to this email or call the clinic and we'll find you a time that fits.</div>
             <div class="flag k"><b>No treatment is ever named, in any message, in any journey</b>Naming what somebody asked about turns a commercial message into a health record. Interest, bookings and spend are commercial. What they had is not.</div>
           </div>
@@ -441,7 +446,7 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
 
         <div class="node">
           <div class="hd"><span class="ic"><svg><use href="#i-chat"/></svg></span><span class="ch">SMS</span><span class="who">Podium</span></div>
-          <div class="bd"><div class="nm">Last note from us</div>
+          <div class="bd"><div class="dy">Day 3</div><div class="nm">Last note from us</div>
             <div class="say">Hi {{first_name}}, last note from us. If you'd still like to come in, the diary is here {{booking_link}} and we'll hold whatever suits. Otherwise we'll leave you to it.</div></div>
         </div>
 
