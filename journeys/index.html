@@ -324,8 +324,8 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
 
   <div class="board">
     <div class="bh">
-      <h2>They enquired.</h2>
-      <div class="meta">Six messages over five days &nbsp;&middot;&nbsp; three of them are phone calls</div>
+      <h2>Booking on the website.</h2>
+      <div class="meta">The fork page sorts returning from new &nbsp;&middot;&nbsp; returning guests never see a form</div>
     </div>
     <div class="scroller">
       <div class="flow">
@@ -338,76 +338,109 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
 
         <div class="arw"></div>
 
-        <div class="node trig">
-          <div class="hd"><span class="ic"><svg><use href="#i-form"/></svg></span><span class="ch">LANDER</span></div>
-          <div class="bd"><div class="nm">The fork page</div>
-            <div class="why">Repeat guests go straight to the diary. New guests leave a number.</div></div>
-        </div>
-
-        <div class="arw"><b>1 minute</b></div>
-
         <div class="node">
-          <div class="hd"><span class="ic"><svg><use href="#i-chat"/></svg></span><span class="ch">SMS</span><span class="who">Podium</span></div>
-          <div class="bd"><div class="dy">Day 0 &middot; 1 minute after enquiry</div><div class="nm">We've got you</div>
-            <div class="say">Hi {{first_name}}, it's Lume Wellness. We've got your request and someone from the team will call you shortly from {{clinic_number}} to find you a time. Save the number so you know it's us.</div>
-            <div class="why"><b>The number is the point.</b> An unknown Chicago number goes to voicemail.</div>
+          <div class="hd"><span class="ic"><svg><use href="#i-form"/></svg></span><span class="ch">THE FORK PAGE</span><span class="who">Podium lander</span></div>
+          <div class="bd"><div class="nm">One question, two buttons</div>
+            <div class="say"><u>The page asks</u>Have you been to Lume before?</div>
+            <div class="say"><u>Two buttons</u>"I've been before" and "I'm new here". One click, no typing.</div>
+            <div class="why"><b>Why it exists.</b> Regulars should never fill in a form, and new guests should never be left alone with a calendar they don't understand yet.</div>
           </div>
         </div>
 
-        <div class="arw"><b>Within 1 hour</b></div>
+        <div class="arw"></div>
 
-        <div class="node human">
-          <div class="hd"><span class="ic"><svg><use href="#i-phone"/></svg></span><span class="ch">PHONE</span><span class="who">Front desk</span></div>
-          <div class="bd"><div class="dy">Day 0 &middot; within 1 business hour</div><div class="nm">First call</div>
-            <div class="say">Hi {{first_name}}, it's {{name}} from Lume Wellness. You got in touch about coming in. Is now an alright time to find you a slot?</div>
-            <div class="flag"><b>One business hour</b>This is the standard everything else on this board depends on. Notification at four hours.</div>
+        <div class="forkwrap">
+        <div class="dec">
+          <div class="q">Been here before?</div>
+          <div class="n">One click on the fork page</div>
+        </div>
+
+        <div class="brk"><i class="a"></i><i class="v"></i><i class="u"></i><i class="d"></i><span class="au"></span><span class="ad"></span></div>
+
+        <div class="lanes">
+
+          <div class="lrow">
+            <span class="llab">I've been before</span>
+            <div class="lseq">
+            <div class="node">
+              <div class="hd"><span class="ic"><svg><use href="#i-cal"/></svg></span><span class="ch">DIARY</span><span class="who">Podium</span></div>
+              <div class="bd"><div class="nm">Straight to the diary</div>
+                <div class="say">The live calendar, nothing in the way. They pick their own time and they're done.</div>
+                <div class="why">No form, no follow-up, nothing else fires.</div></div>
+            </div>
+            <div class="arw"></div>
+            <div class="node win">
+              <div class="hd"><span class="ic"><svg><use href="#i-check"/></svg></span><span class="ch">WIN</span></div>
+              <div class="bd"><div class="nm">Booked</div>
+                <div class="why">Confirmation and reminders take it from here.</div></div>
+            </div>
+            </div>
           </div>
+
+          <div class="lrow">
+            <span class="llab">I'm new here</span>
+            <div class="lseq">
+            <div class="node">
+              <div class="hd"><span class="ic"><svg><use href="#i-form"/></svg></span><span class="ch">FORM</span><span class="who">Podium lander</span></div>
+              <div class="bd"><div class="nm">Leave a number</div>
+                <div class="say"><u>The form asks for three things</u>Name, mobile, and roughly when suits. Nothing clinical, nothing more.</div></div>
+            </div>
+            <div class="arw"><b>1 minute</b></div>
+            <div class="node">
+              <div class="hd"><span class="ic"><svg><use href="#i-chat"/></svg></span><span class="ch">SMS</span><span class="who">Podium</span></div>
+              <div class="bd"><div class="dy">Day 0 &middot; 1 minute after enquiry</div><div class="nm">We've got you</div>
+                <div class="say">Hi {{first_name}}, it's Lume Wellness. We've got your request and someone from the team will call you shortly from {{clinic_number}} to find you a time. Save the number so you know it's us.</div>
+                <div class="why"><b>The number is the point.</b> An unknown Chicago number goes to voicemail.</div>
+              </div>
+            </div>
+            <div class="arw"><b>Within 1 hour</b></div>
+            <div class="node human">
+              <div class="hd"><span class="ic"><svg><use href="#i-phone"/></svg></span><span class="ch">PHONE</span><span class="who">Front desk</span></div>
+              <div class="bd"><div class="dy">Day 0 &middot; within 1 business hour</div><div class="nm">First call</div>
+                <div class="say">Hi {{first_name}}, it's {{name}} from Lume Wellness. You got in touch about coming in. Is now an alright time to find you a slot?</div>
+                <div class="flag k"><b>One business hour</b>This is the standard everything else on this board depends on. Notification at four hours.</div>
+              </div>
+            </div>
+            <div class="arw"><b>+1 hour</b><i>no answer</i></div>
+            <div class="node">
+              <div class="hd"><span class="ic"><svg><use href="#i-chat"/></svg></span><span class="ch">SMS</span><span class="who">Podium</span></div>
+              <div class="bd"><div class="dy">Day 0 &middot; 1 hour after the call</div><div class="nm">Text after a missed call</div>
+                <div class="say">Hi {{first_name}}, just tried you from Lume. Easier to text? Tell us roughly when suits and what you're interested in, and we'll come back with two options.</div></div>
+            </div>
+            <div class="arw"><b>Day 2</b><i>no reply</i></div>
+            <div class="node human">
+              <div class="hd"><span class="ic"><svg><use href="#i-phone"/></svg></span><span class="ch">PHONE</span><span class="who">Front desk</span></div>
+              <div class="bd"><div class="dy">Day 2</div><div class="nm">Second call</div>
+                <div class="say">Same opener, a different hour of the day.</div>
+                <div class="why">Most people are reachable at some point. Rarely the one you first tried.</div></div>
+            </div>
+            <div class="arw"><b>Day 3</b><i>no answer</i></div>
+            <div class="node">
+              <div class="hd"><span class="ic"><svg><use href="#i-mail"/></svg></span><span class="ch">EMAIL</span><span class="who">Podium</span></div>
+              <div class="bd"><div class="dy">Day 3</div><div class="nm">What to expect</div>
+                <div class="say"><u>Subject &middot; What actually happens on a first visit</u>A first visit here starts with a conversation, not a treatment. Somebody sits down with you, asks what you're after, and tells you honestly what they'd suggest and what they wouldn't. Nothing gets decided on the spot. If you'd rather pick a time yourself: {{booking_link}}</div></div>
+            </div>
+            <div class="arw"><b>Day 5</b><i>no reply</i></div>
+            <div class="node human">
+              <div class="hd"><span class="ic"><svg><use href="#i-phone"/></svg></span><span class="ch">PHONE</span><span class="who">Front desk</span></div>
+              <div class="bd"><div class="dy">Day 5</div><div class="nm">Third call, then a voicemail</div>
+                <div class="say">Hi {{first_name}}, {{name}} at Lume. Third time trying you, so I'll leave it here. If you still want to come in, text this number any time and we'll sort it out. Thanks.</div></div>
+            </div>
+            <div class="arw"><i>three attempts spent</i></div>
+            <div class="node out">
+              <div class="hd"><span class="ic"><svg><use href="#i-cross"/></svg></span><span class="ch">END</span></div>
+              <div class="bd"><div class="nm">Nurture list</div>
+                <div class="why">Never touched by this journey again.</div></div>
+            </div>
+            </div>
+          </div>
+
         </div>
-
-        <div class="arw"><b>+1 hour</b><i>no answer</i></div>
-
-        <div class="node">
-          <div class="hd"><span class="ic"><svg><use href="#i-chat"/></svg></span><span class="ch">SMS</span><span class="who">Podium</span></div>
-          <div class="bd"><div class="dy">Day 0 &middot; 1 hour after the call</div><div class="nm">Text after a missed call</div>
-            <div class="say">Hi {{first_name}}, just tried you from Lume. Easier to text? Tell us roughly when suits and what you're interested in, and we'll come back with two options.</div></div>
-        </div>
-
-        <div class="arw"><b>Day 2</b><i>no reply</i></div>
-
-        <div class="node human">
-          <div class="hd"><span class="ic"><svg><use href="#i-phone"/></svg></span><span class="ch">PHONE</span><span class="who">Front desk</span></div>
-          <div class="bd"><div class="dy">Day 2</div><div class="nm">Second call</div>
-            <div class="say">Same opener, a different hour of the day.</div>
-            <div class="why">Most people are reachable at some point. Rarely the one you first tried.</div></div>
-        </div>
-
-        <div class="arw"><b>Day 3</b><i>no answer</i></div>
-
-        <div class="node">
-          <div class="hd"><span class="ic"><svg><use href="#i-mail"/></svg></span><span class="ch">EMAIL</span><span class="who">Podium</span></div>
-          <div class="bd"><div class="dy">Day 3</div><div class="nm">What to expect</div>
-            <div class="say"><u>Subject &middot; What actually happens on a first visit</u>A first visit here starts with a conversation, not a treatment. Somebody sits down with you, asks what you're after, and tells you honestly what they'd suggest and what they wouldn't. Nothing gets decided on the spot. If you'd rather pick a time yourself: {{booking_link}}</div></div>
-        </div>
-
-        <div class="arw"><b>Day 5</b><i>no reply</i></div>
-
-        <div class="node human">
-          <div class="hd"><span class="ic"><svg><use href="#i-phone"/></svg></span><span class="ch">PHONE</span><span class="who">Front desk</span></div>
-          <div class="bd"><div class="dy">Day 5</div><div class="nm">Third call, then a voicemail</div>
-            <div class="say">Hi {{first_name}}, {{name}} at Lume. Third time trying you, so I'll leave it here. If you still want to come in, text this number any time and we'll sort it out. Thanks.</div></div>
-        </div>
-
-        <div class="arw"><i>three attempts spent</i></div>
-
-        <div class="node out">
-          <div class="hd"><span class="ic"><svg><use href="#i-cross"/></svg></span><span class="ch">END</span></div>
-          <div class="bd"><div class="nm">Nurture list</div>
-            <div class="why">Never touched by this journey again.</div></div>
         </div>
 
       </div>
     </div>
-    <p class="hint">Three calls across five days, varying the day and the hour, with a voicemail and a text every time. Then we stop.</p>
+    <p class="hint">Returning guests book themselves in two clicks. New guests get a call inside the hour, then three attempts across five days before we stop.</p>
   </div>
 
   <div class="board">
@@ -463,7 +496,7 @@ footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:16px;font-si
 
     <div class="note pink">
       <b>These two boards need the Podium tracking script on the site</b>
-      The enquiry and abandoned booking boards both fire from activity on the Studio 3 site. The after-the-visit board fires from the payment and needs nothing.
+      The booking and abandoned booking boards both fire from activity on the Studio 3 site. The after-the-visit board fires from the payment and needs nothing.
     </div>
   </div>
 
